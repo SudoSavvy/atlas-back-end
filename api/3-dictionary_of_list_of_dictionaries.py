@@ -2,13 +2,13 @@
 
 """
 This module provides functionality for exporting task data to JSON format.
-It retrieves task records for all users and stores them in a structured 
+It retrieves task records for all users and stores them in a structured
 dictionary format, then writes the data to a JSON file.
 
 The structure of the output is:
 {
     "USER_ID": [
-        {"username": "USERNAME", "task": "TASK_TITLE", 
+        {"username": "USERNAME", "task": "TASK_TITLE",
         "completed": TASK_COMPLETED_STATUS},
         ...
     ]
