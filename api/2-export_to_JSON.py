@@ -2,8 +2,10 @@
 """
 This script exports all tasks owned by a specific employee to a JSON file.
 
-The script takes a user ID as a command-line argument, retrieves data about the
-tasks assigned to the user from a REST API, and writes this data to a JSON file.
+The script takes a user ID as a command-line argument,
+retrieves data about the
+tasks assigned to the user from a REST API,
+and writes this data to a JSON file.
 The file is named "<USER_ID>.json" and contains the following structure:
 {
     "USER_ID": [
