@@ -1,11 +1,17 @@
 #!/usr/bin/python3
 """
-A script to export all tasks owned by a specific employee to a CSV file.
+This script exports all tasks owned by a specific employee to a CSV file.
 
-This script takes a user ID as a command-line argument, retrieves information about the
-employee's tasks from a REST API, and saves the task data in a CSV file. The file is
-named <USER_ID>.csv and includes columns for user ID, username, task completion
-status, and task title.
+The script takes a user ID as a command-line argument, retrieves data about the
+tasks assigned to the user from a REST API, and writes this data to a CSV file.
+The file is named "<USER_ID>.csv" and contains the following columns:
+- USER_ID
+- USERNAME
+- TASK_COMPLETED_STATUS
+- TASK_TITLE
+
+Example usage:
+    python3 1-export_to_CSV.py 2
 """
 
 import csv
@@ -36,4 +42,4 @@ if __name__ == "__main__":
 
         # Write each task to the CSV file
         for task in todos_data:
-            csv_writer.writerow([user_id, username, task["completed"],
+            csv_writer.writerow([user_id, username, task["completed"], task["title"]])
